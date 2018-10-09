@@ -27,10 +27,12 @@
 
       <main role="main" class="inner cover">
         <h1 class="cover-heading">Hello there.</h1>
-        <p class="lead">We've trained our <strong>artificial intelligence model</strong> on hundreds of fashion styles, models, and looks. We'd <strong>love</strong> for you to try it out.</p>
+        <p class="lead">We've trained our <strong>artificial intelligence model</strong> on hundreds of fashion styles, models, and looks. We'd <strong>love</strong> for you to try it out. Let us know where to reach you with our results!</p>
         <p class="lead">
-          <button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Upstyle me</button>
+            <input id="email" type="email" value="Your email...">
+            <button id="upstyle-me" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i>Upstyle me</i></button>
         </p>
+        <p id="error"></p>
       </main>
 
       <!-- Modal -->
@@ -44,18 +46,23 @@
               </button>
             </div>
             <div class="modal-body">
-              Let our artificial intelligence model provide style insights based on your photograph.
+              <p id="modal-text">Let our artificial intelligence model provide style insights based on your photograph.</p>
               <div id="preview" class="preview">
               </div>
 
-              <div class="upload">
+              
+
+              <div id="upload-holder" class="upload">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroupFileAddon01">File</span>
                   </div>
                   <div class="custom-file">
-                    <input id="files" type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                    <label id="list" class="custom-file-label" for="inputGroupFile01">...</label>
+                    <form id="upload-file" method="POST" enctype="multipart/form-data">
+                      
+                      <input id="files" name="the-upload" type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                      <label id="list" class="custom-file-label" for="inputGroupFile01">...</label>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -63,8 +70,8 @@
             </div>
 
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" onclick="upstyle()">Upstyle</button>
+              <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button id="upload-file-btn" type="button" class="btn disabled">Upstyle</button>
             </div>
           </div>
         </div>
@@ -81,9 +88,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script src="upload.js"></script>
+  <script src="./upload.js"></script>
   </body>
 </html>

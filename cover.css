@@ -9,10 +9,17 @@ a:hover {
   color: #fff;
 }
 
+.btn.disabled, .btn.disabled:hover {
+  outline: 0 !important;
+  box-shadow: none;
+  border: 0;
+  background-color: #ddd;
+}
+
 .btn:focus, .btn:active, .btn:active:focus, .btn.active:focus{
-    outline: 0 !important;
-    box-shadow: none;
-    border: 0;
+  outline: 0 !important;
+  box-shadow: none;
+  border: 0;
 }
 
 /* Custom default button */
@@ -66,14 +73,24 @@ body {
 }
 
 img {
-  max-height: 30%;
-  max-width: 30%;
+  max-height: 25%;
+  max-width: 25%;
 }
 
 .cover-container {
   max-width: 42em;
 }
 
+#email {
+  color: #888;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  width: 75%;
+}
+
+#error {
+  font-size: 80%;
+}
 
 /*
  * Header
@@ -172,8 +189,8 @@ img {
 
 .btn-secondary:hover, .btn-secondary:focus:hover {
   transition: 0.3s;
-  color: #777;
-  background-color: #ddd;
+  color: #555;
+  background-color: #bbb;
   border: 0;
 }
 
