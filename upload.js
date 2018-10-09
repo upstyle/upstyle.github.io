@@ -93,7 +93,7 @@ function handleFileSelect(evt) {
 
 $(function() {
   $('#upload-file-btn').click(function() {
-      var url = 'https://validation-backend.herokuapp/upload';
+      var url = 'https://validation-backend.herokuapp.com/upload';
       $('#modal-text').html("Your image is uploading...");
       var form_data = new FormData($('#upload-file')[0]);          
       form_data.append("address", mailAddress);
