@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>upstyle | Style Analytics</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <img src="upstyle.png">
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Hello there.</h1>
+        <p class="lead">We've trained our <strong>artificial intelligence model</strong> on hundreds of fashion styles, models, and looks. We'd <strong>love</strong> for you to try it out. Let us know where to reach you with our results!</strong></p>
+        <p class="lead">
+            <input id="email" type="email" value="Your email...">
+            <button id="upstyle-me" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i>Upstyle me</i></button>
+        </p>
+        <p id="error"></p>
+      </main>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Upload an image...</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><font style="color:#eee;">&times;</font></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="modal-text">Let our artificial intelligence model provide style insights based on your photograph.</p>
+              <div id="preview" class="preview">
+              </div>
+
+              
+
+              <div id="upload-holder" class="upload">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon01">File</span>
+                  </div>
+                  <div class="custom-file">
+                    <form id="upload-file" method="POST" enctype="multipart/form-data">
+                      
+                      <input id="files" name="the-upload" type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                      <label id="list" class="custom-file-label" for="inputGroupFile01">...</label>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button id="upload-file-btn" type="button" class="btn disabled">Upstyle</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Copyright &copy 2018 Upstyle</p>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="upload.js"></script>
+  </body>
+</html>
