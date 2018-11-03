@@ -162,11 +162,13 @@ gaia = {
                 if(transparent) {
                     transparent = false;
                     $navbar.removeClass('navbar-transparent');
+                    $('#navbar-button').removeClass('btn-fill');
                 }
             } else {
                 if( !transparent ) {
                     transparent = true;
                     $navbar.addClass('navbar-transparent');
+                    $('#navbar-button').addClass('btn-fill');
                 }
             }
     }, 17),
